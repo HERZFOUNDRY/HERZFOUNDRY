@@ -6,6 +6,9 @@
   <meta name="description" content="HERZ FOUNDRY — Bringing products to their fullest visual potential. Based in Indonesia." />
   <title>HERZ FOUNDRY | Ad Creative &amp; Product Visualization</title>
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/white-Logo-herz.png" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1250,6 +1253,11 @@
       </a>
     </div>
 
+    <!-- Manual Email Address Display for Users (Allows double-click selection) -->
+    <p class="fade d3" style="margin-top: -36px; margin-bottom: 64px; font-size: 11px; letter-spacing: 0.1em; color: var(--grey-2); text-transform: uppercase;">
+      Or copy email: <span style="color: var(--white); user-select: all; text-transform: none;">herzfoundry@gmail.com</span>
+    </p>
+
     <div class="social-bar fade d4">
       <a href="https://www.instagram.com/bay.hermawan/"               class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="https://www.tiktok.com/@bay.hermawan"                  class="social-link" target="_blank" rel="noopener noreferrer">TikTok</a>
@@ -1326,9 +1334,9 @@
 
     let modelMesh = null;
 
-    /* Load GLTF */
+    /* Load GLTF (Requested with lowercase filename format for case-sensitive hosting) */
     new GLTFLoader().load(
-      'assets/Logo.glb',
+      'assets/logo.glb',
       (gltf) => {
         modelMesh = gltf.scene;
 
@@ -1354,7 +1362,7 @@
         scene.add(modelMesh);
       },
       undefined,
-      (err) => console.warn('assets/Logo.glb could not be loaded:', err)
+      (err) => console.warn('assets/logo.glb could not be loaded:', err)
     );
 
     /* Clean Auto-Rotation Loop with IntersectionObserver Optimization */
